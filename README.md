@@ -10,8 +10,8 @@ The role of energy consultants is therefore critical in guiding homeowners throu
 
 ### 1.2 Problem Spotlight
 Despite growing demand, energy consultants face persistent challenges in acquiring and retaining clients. Two key barriers are ineffective Customer Relationship Management (CRM) and limited marketing and managerial skills. The absence of these capabilities can significantly hinder business success and, in competitive markets, even lead to failure (Radipere & Scheers, 2014). Additionally, customer acquisition is notably time-consuming: based on our interviews, consultants spend an average of 3 out of 13 total hours per consultation,nearly one quarter of their time, solely on acquiring clients.
-## 2. Solution
-
+## 2. Solution & Future Goals
+Our goal is to support energy consultants in improving their sales and marketing strategies by leveraging machine learning. Specifically, we aim to help them acquire more clients by identifying the characteristics that make homeowners most likely to book an energy consultation. Based on these insights, we propose the development of a tailored marketing campaign aligned with the preferences of different customer segments, as well as a targeted sales strategy focused on homeowners with a high predicted interest in energy consultations.
 ## 3. Methodology
 
 ## 4. Creation of Datasets
@@ -25,3 +25,4 @@ Despite growing demand, energy consultants face persistent challenges in acquiri
 
 ## Sources
 Statista 2024
+Radipere & Scheers, 2014
