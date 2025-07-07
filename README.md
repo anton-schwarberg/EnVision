@@ -1,6 +1,6 @@
 # EnVision
 ## Project Description
-This university project simulated a real-world business case. It began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods.
+This university project simulated a real-world business case in the area of energy consultation. We began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods.
 
 ## 1. Problem
 
@@ -16,3 +16,5 @@ This university project simulated a real-world business case. It began by identi
 ## 5. How to Run the Project
 
 ## 6. Example Output / Screenshots
+
+## Sources
