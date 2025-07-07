@@ -1,12 +1,17 @@
 # EnVision
-## 1. Project Description
+## Project Description
 This university project simulated a real-world business case. It began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods.
 
-## 2. Data
+## 1. Problem
 
-## 3. Objective
+## 2. Solution
 
-## 4. Models & Evaluation
+## 3. Methodology
+
+## 4. Creation of Datasets
+
+## 4. Creating Models
+### 4.1 Data Cleaning and Preprocessing
 
 ## 5. How to Run the Project
 
