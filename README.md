@@ -30,15 +30,15 @@ Based on a thorough literature review, we explored which factors most strongly i
 | Key Variables | Reason |
 |-----------|-------|
 | House Type, Age, and Size | Critical physical attributes determining urgency and scope for energy optimization. |
-| Income       | Influences financial capability for renovations and likelihood of leveraging subsidies for energy-efficient <br>improvements. |
+| Income       | Influences financial capability for renovations and likelihood of leveraging subsidies for energy-efficient improvements. |
 | Occupation Status and Education Level | Indicates access to information and comprehension of energy-saving measures and subsidies. |
-| Location     | Urban or rural settings impact availability of consultancy services and reflect energy usage patterns and conservation <br>opportunities. |
+| Location     | Urban or rural settings impact availability of consultancy services and reflect energy usage patterns and conservation opportunities. |
 | Energy Bill and Source      | Reflects current expenditure and incentive for efficiency improvements, openness to alternative energy solutions. |
 | Knowledge and Awareness of Energy Issues | Reflects existing understanding of energy matters, correlating with tendency to seek expert advice. |
-| Attitudes Towards Energy Reduction and <br> Investment Willingness     | Psychological drivers indicating readiness to act on efficiency measures. |
+| Attitudes Towards Energy Reduction and Investment Willingness     | Psychological drivers indicating readiness to act on efficiency measures. |
 | Belief in Climate Change      | Ideological factor motivating actions towards sustainable living and pursuit of energy consultations. |
 | Past Renovations and Environmental Concern  | Historical actions and environmental mindfulness suggest behavior beneficial to future consultation engagements. |
-| Dependent Variable: History of Booking Energy <br>Consultation      | Direct indicator of the target customer for energy consultants. |
+| Dependent Variable: History of Booking Energy Consultation      | Direct indicator of the target customer for energy consultants. |
 ## 4. Creation of Datasets
 
 ## 4. Creating Models
