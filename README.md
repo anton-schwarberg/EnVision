@@ -1,6 +1,6 @@
 # EnVision
 ## Project Description
-This university project simulated a real-world business case in the area of energy consultation. We began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods. This project was done in April and Mai 2024.
+This university project simulated a real-world business case. It began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods. This project was done in April and Mai 2024.
 ## 1. Problem
 ### 1.1 Background
 Buildings in the EU account for 36% of greenhouse gas emissions and 40% of energy consumption. In Germany, residential housing alone contributes to 15% of total national emissions (Statista, 2024). To meet its climate targets, such as 65% GHG reduction by 2030 and net, zero by 2045—the government promotes energy-efficient refurbishments, supported by mandatory energy consultations.
