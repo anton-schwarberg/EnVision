@@ -30,7 +30,12 @@ Based on a thorough literature review, we explored which factors most strongly i
 | Key Variables | Reason |
 |-----------|-------|
 | House Type, Age, and Size | 29    |
-| Ben       | 34    |
+| Income       | 34    |
+| Occupation Status and Education Level | 41    |
+| Location     | 41    |
+| Energy Bill and Source      | 41    |
+| Knowledge and Awareness of Energy Issues      | 41    |
+| Attitudes Towards Energy Reduction and <br> Investment Willingness     | 41    |
 | Clara     | 41    |
 ## 4. Creation of Datasets
 
