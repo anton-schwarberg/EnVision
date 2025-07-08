@@ -27,11 +27,11 @@ The goal was to generate a rich dataset that reflects the diversity of German ho
 ### 3.2 Research Focus
 Based on a thorough literature review, we explored which factors most strongly influence a homeowner’s decision to book an energy consultation. The research built upon foundational work by scholars such as Galvin (2014), Janda (2011), Stern (2000), and Heinzle (2012), who investigated the roles of structural housing characteristics, energy usage behavior, and environmental attitudes contributing to sustainable choices.
 ### 3.3 Key Variables
-| Name      | Alter | Beruf        |
-|-----------|-------|--------------|
-| Anna      | 29    | Designerin   |
-| Ben       | 34    | Entwickler   |
-| Clara     | 41    | Projektmanagerin |
+| Key Variables | Reason |
+|-----------|-------|
+| House Type, Age, and Size | 29    |
+| Ben       | 34    |
+| Clara     | 41    |
 ## 4. Creation of Datasets
 
 ## 4. Creating Models
