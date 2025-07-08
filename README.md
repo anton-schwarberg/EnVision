@@ -2,6 +2,9 @@
 ## Project Description
 This university project simulated a real-world business case in the area of energy consultation. We began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods. This project was done in April and Mai 2024.
 
+## Objective of this Project
+
+
 ## 1. Problem
 ### 1.1 Background
 Buildings in the EU account for 36% of greenhouse gas emissions and 40% of energy consumption. In Germany, residential housing alone contributes to 15% of total national emissions (Statista, 2024). To meet its climate targets, such as 65% GHG reduction by 2030 and net, zero by 2045—the government promotes energy-efficient refurbishments, supported by mandatory energy consultations.
@@ -40,7 +43,9 @@ Based on a thorough literature review, we explored which factors most strongly i
 | Past Renovations and Environmental Concern  | Historical actions and environmental mindfulness suggest behavior beneficial to future consultation engagements. |
 | Dependent Variable: History of Booking Energy Consultation | Direct indicator of the target customer for energy consultants. |
 ## 4. Creation of Datasets
-
+As the span of the course was only a few weeks, we were unable to gather sufficient data in the short time. Therefore we opted to construct our own datasets.
+We created one dataset for training the models (Link), and one for creating a use case (Link). The Second Dataset included information about the individuals, and additionally names, phone numbers and e-mail addresses to resemble a real potential lead list, like one might get from paid lead providers. The goal was to train a model on the dataset with known end results (e.g. booked an energy consultation or not), and then apply this dataset to the potential lead list to determine if the lead was likely or unlikely to react to an offer.
+Additionally, using k-means clustering
 ## 4. Creating Models
 ### 4.1 Data Cleaning and Preprocessing
 
