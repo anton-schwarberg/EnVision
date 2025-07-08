@@ -14,7 +14,6 @@ The goal of this project was to develop machine learning models that support ene
 1. Identify target customer profiles using unsupervised learning (k-means clustering) to uncover shared characteristics among homeowners who are likely to book an energy consultation. These insights can inform the development of tailored marketing campaigns aligned with the preferences of each customer segment.
 2. Predict consultation likelihood using supervised learning models trained to estimate which homeowners are most likely to book a consultation. In addition to making accurate predictions, the models also reveal which factors are most influential in driving this decision. These predictions are then applied to a separate dataset of potential leads ([link here]), enabling consultants to focus their outreach on the most promising contacts. This targeted approach can significantly reduce time spent on cold outreach and improve conversion efficiency.
 
-support energy consultants in improving their sales and marketing strategies by leveraging machine learning. Specifically, we aim to help them acquire more clients by identifying the characteristics that make homeowners most likely to book an energy consultation. Based on these insights, we propose the development of a tailored marketing campaign aligned with the preferences of different customer segments, as well as a targeted sales strategy focused on homeowners with a high predicted interest in energy consultations.
 ## 3. Methodology
 ### 3.1 Data Collection
 To better understand which homeowners are most likely to participate in energy consultations, we designed a structured survey targeting a diverse group of individuals across Germany between 2020 and 2024. The survey was distributed via networks of building cooperatives and homeowners’ associations, enabling direct access to a broad and demographically varied audience. This approach helped ensure high response rates and accurate insights into residential preferences, behaviors, and motivations.
@@ -42,17 +41,75 @@ Based on a thorough literature review, we explored which factors most strongly i
 | Belief in Climate Change      | Ideological factor motivating actions towards sustainable living and pursuit of energy consultations. |
 | Past Renovations and Environmental Concern  | Historical actions and environmental mindfulness suggest behavior beneficial to future consultation engagements. |
 | Dependent Variable: History of Booking Energy Consultation | Direct indicator of the target customer for energy consultants. |
+
 ## 4. Creation of Datasets
-As the span of the course was only a few weeks, we were unable to gather sufficient data in the short time. Therefore we opted to construct our own datasets.
-We created one dataset for training the models (Link), and one for creating a use case (Link). The Second Dataset included information about the individuals, and additionally names, phone numbers and e-mail addresses to resemble a real potential lead list, like one might get from paid lead providers. The goal was to train a model on the dataset with known end results (e.g. booked an energy consultation or not), and then apply this dataset to the potential lead list to determine if the lead was likely or unlikely to react to an offer.
-Additionally, using k-means clustering
+As the scope of the course was only a few weeks, we were unable to gather sufficient data in the short time. Therefore we opted to construct our own datasets, based on the 32 interviews we had conducted about the topic:
+### 1. Training Dataset (Link)
+This dataset was designed for training and evaluating our machine learning models. It includes multiple homeowner profiles grouped into three segments based on observed patterns from the interviews, as well as one additional group with randomized data to simulate noise and increase realism. The dataset contains a labeled outcome variable indicating whether a homeowner had booked an energy consultation or not. The goal was to simulate a realistic distribution of potential customer types.
+### 3. Lead List Dataset (Link)
+The second dataset simulates a real-world contact list, such as those purchased from online providers. It mirrors the structure of the training dataset but includes personal contact information (full name, email address, phone number) and does not contain the outcome label. This resembles a typical challenge faced by energy consultants, who often work with low-quality lead lists. Our predictive models are applied to this dataset to identify and prioritize the most promising leads, helping consultants save time and improve outreach efficiency.
+
 ## 4. Creating Models
-### 4.1 Data Cleaning and Preprocessing
+### 4.1 Data Cleaning and Preprocessing [BILDER HINZUFÜGEN]
+The dataset underwent a structured preprocessing pipeline to ensure high data quality and optimize performance for machine learning models.
 
+First, we verified data integrity. No missing values were found, so no imputation or row removal was needed. We then analyzed numerical variables for outliers using boxplots. While outliers were present in some variables (e.g. house size, age), they were few in number (1.8% of the data), reflected realistic values, and did not indicate data entry errors. As a result, we retained them to preserve the dataset’s integrity.
+
+Categorical variables were transformed using one-hot encoding. Depending on the model, we either retained or dropped one dummy variable to avoid multicollinearity (“dummy trap”). For example, logistic regression and k-means required dropping one category, while decision trees and random forests were not sensitive to this.
+
+To check variables for interrelationships, a correlation matrix was built. Though there were some moderately strong correlations, none of them was above the set threshold of 0.9. Therefore no necessity to delete variables was seen.
+
+We also prepared the target variable for binary classification. The outcome variable booked_energy_consultation was mapped to a Boolean format:<br>
+Yes → True<br>No and Considered but not used → False.
+
+For feature scaling, we applied MinMaxScaler and StandardScaler selectively:
+
+- MinMaxScaler was used for models that rely on distance calculations, such as k-nearest neighbors and neural networks.
+- StandardScaler was used for models that assume a normal distribution, such as SVMs or PCA. [CHECK IF USED]
+
+These steps are implemented in the notebook [NOTEBOOK HERE]
 ## 5. How to Run the Project
+Follow these steps to set up and run the project on your local machine:
 
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-rep
+```
+### 2. Set up the environment
+Install all required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Alternatively, if you are using a virtual environment or conda:
+```bash
+# Create and activate virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 3. Launch Jupyter Notebook
+```bash
+jupyter notebook
+```
+
+Navigate to the `notebooks/` folder and run the files in the following order: [ANPASSEN]
+
+1. `01_create_datasets.ipynb`  
+2. `02_cleaning_preprocessing.ipynb`  
+3. `03_adapt_dataset.ipynb`  
+4. *(...other notebooks as needed)*  
+5. `10_prediction_on_new_data.ipynb`
+
+### 4. Make predictions on new data
+
+In the final notebook (`LINK HIER REIN`), the trained model is applied to the lead list (`LINK HIER REIN`) to predict which homeowners are most likely to book an energy consultation. The top leads can then be exported for targeted outreach.
 ## 6. Example Output / Screenshots
 
 ## Sources
 Statista 2024
 Radipere & Scheers, 2014
+Galvin (2014), Janda (2011), Stern (2000), and Heinzle (2012)
