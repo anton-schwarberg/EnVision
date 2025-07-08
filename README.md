@@ -13,6 +13,16 @@ Despite growing demand, energy consultants face persistent challenges in acquiri
 ## 2. Solution & Future Goals
 Our goal is to support energy consultants in improving their sales and marketing strategies by leveraging machine learning. Specifically, we aim to help them acquire more clients by identifying the characteristics that make homeowners most likely to book an energy consultation. Based on these insights, we propose the development of a tailored marketing campaign aligned with the preferences of different customer segments, as well as a targeted sales strategy focused on homeowners with a high predicted interest in energy consultations.
 ## 3. Methodology
+### 3.1 Data Collection
+To better understand which homeowners are most likely to participate in energy consultations, we designed a structured survey targeting a diverse group of individuals across Germany between 2020 and 2024. The survey was distributed via networks of building cooperatives and homeowners’ associations, enabling direct access to a broad and demographically varied audience. This approach helped ensure high response rates and accurate insights into residential preferences, behaviors, and motivations.
+The survey captured quantitative data using three types of input variables:
+**Numeric continuous** (e.g., age, income)
+**Numeric discrete** (e.g., energy awareness on a 1–5 scale)
+**Categorical** (e.g., house type, occupation status)
+The goal was to generate a rich dataset that reflects the diversity of German homeowners in both urban and rural contexts, allowing us to uncover meaningful patterns for customer targeting.
+### 3.2 Research Focus
+
+### 3.3 Key Variables
 
 ## 4. Creation of Datasets
 
