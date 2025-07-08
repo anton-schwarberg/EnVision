@@ -16,9 +16,13 @@ Our goal is to support energy consultants in improving their sales and marketing
 ### 3.1 Data Collection
 To better understand which homeowners are most likely to participate in energy consultations, we designed a structured survey targeting a diverse group of individuals across Germany between 2020 and 2024. The survey was distributed via networks of building cooperatives and homeowners’ associations, enabling direct access to a broad and demographically varied audience. This approach helped ensure high response rates and accurate insights into residential preferences, behaviors, and motivations.
 The survey captured quantitative data using three types of input variables:
+
 **Numeric continuous** (e.g., age, income)
+
 **Numeric discrete** (e.g., energy awareness on a 1–5 scale)
+
 **Categorical** (e.g., house type, occupation status)
+
 The goal was to generate a rich dataset that reflects the diversity of German homeowners in both urban and rural contexts, allowing us to uncover meaningful patterns for customer targeting.
 ### 3.2 Research Focus
 
