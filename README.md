@@ -18,14 +18,20 @@ To better understand which homeowners are most likely to participate in energy c
 The survey captured quantitative data using three types of input variables:
 
 **Numeric continuous** (e.g., age, income)
+
 **Numeric discrete** (e.g., energy awareness on a 1–5 scale)
+
 **Categorical** (e.g., house type, occupation status)
 
 The goal was to generate a rich dataset that reflects the diversity of German homeowners in both urban and rural contexts, allowing us to uncover meaningful patterns for customer targeting.
 ### 3.2 Research Focus
 Based on a thorough literature review, we explored which factors most strongly influence a homeowner’s decision to book an energy consultation. The research built upon foundational work by scholars such as Galvin (2014), Janda (2011), Stern (2000), and Heinzle (2012), who investigated the roles of structural housing characteristics, energy usage behavior, and environmental attitudes contributing to sustainable choices.
 ### 3.3 Key Variables
-
+| Name      | Alter | Beruf        |
+|-----------|-------|--------------|
+| Anna      | 29    | Designerin   |
+| Ben       | 34    | Entwickler   |
+| Clara     | 41    | Projektmanagerin |
 ## 4. Creation of Datasets
 
 ## 4. Creating Models
