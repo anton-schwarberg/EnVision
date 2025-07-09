@@ -44,9 +44,9 @@ Based on a thorough literature review, we explored which factors most strongly i
 
 ## 4. Creation of Datasets
 As the scope of the course was only a few weeks, we were unable to gather sufficient data in the short time. Therefore we opted to construct our own datasets, based on the 32 interviews we had conducted about the topic:
-### 1. Training Dataset (Link)
+### 1. Training Dataset [Link](https://github.com/anton-schwarberg/envision/blob/main/notebooks/combined_data.xlsx)
 This dataset was designed for training and evaluating our machine learning models. It includes multiple homeowner profiles grouped into three segments based on observed patterns from the interviews, as well as one additional group with randomized data to simulate noise and increase realism. The dataset contains a labeled outcome variable indicating whether a homeowner had booked an energy consultation or not. The goal was to simulate a realistic distribution of potential customer types.
-### 3. Lead List Dataset (Link)
+### 3. Lead List Dataset [Link](https://github.com/anton-schwarberg/envision/blob/main/notebooks/Potential_Customers.xlsx)
 The second dataset simulates a real-world contact list, such as those purchased from online providers. It mirrors the structure of the training dataset but includes personal contact information (full name, email address, phone number) and does not contain the outcome label. This resembles a typical challenge faced by energy consultants, who often work with low-quality lead lists. Our predictive models are applied to this dataset to identify and prioritize the most promising leads, helping consultants save time and improve outreach efficiency.
 
 ## 4. Creating Models
@@ -62,12 +62,13 @@ To check variables for interrelationships, a correlation matrix was built. Thoug
 We also prepared the target variable for binary classification. The outcome variable booked_energy_consultation was mapped to a Boolean format:<br>
 Yes → True<br>No and Considered but not used → False.
 
-For feature scaling, we applied MinMaxScaler and StandardScaler selectively:
+For feature scaling, MinMaxScaler and StandardScaler were applied selectively:
 
 - MinMaxScaler was used for models that rely on distance calculations, such as k-nearest neighbors and neural networks.
-- StandardScaler was used for models that assume a normal distribution, such as SVMs or PCA. [CHECK IF USED]
+- StandardScaler was used for models that assume a normal distribution, such as SVMs or PCA.
 
-These steps are implemented in the notebook [NOTEBOOK HERE]
+These steps were implemented in the notebook [Link](https://github.com/anton-schwarberg/envision/blob/main/notebooks/03_Cleaning_Preprocessing.ipynb)
+
 ## 5. How to Run the Project
 Follow these steps to set up and run the project on your local machine:
 
@@ -98,15 +99,22 @@ jupyter notebook
 
 Navigate to the `notebooks/` folder and run the files in the following order: [ANPASSEN]
 
-1. `01_create_datasets.ipynb`  
-2. `02_cleaning_preprocessing.ipynb`  
-3. `03_adapt_dataset.ipynb`  
-4. *(...other notebooks as needed)*  
-5. `10_prediction_on_new_data.ipynb`
+1. `01_Create Datasets.ipynb`
+2. `02_Create Potential Customer Database.ipynb`
+3. `03_Cleaning_Preprocessing.ipynb`
+4. `04_K-means Clustering + PCA.ipynb`
+5. `05_Baseline Model.ipynb`
+6. `06_Logistic Regression.ipynb`
+7. `07_Decision Tree.ipynb`
+8. `08_k-NN.ipynb`
+9. `09_Neural Network.ipynb`
+10. `10_Random Forest.ipynb`
+11. `11_Prediction on Possible Customers.ipynb`
 
 ### 4. Make predictions on new data
 
-In the final notebook (`LINK HIER REIN`), the trained model is applied to the lead list (`LINK HIER REIN`) to predict which homeowners are most likely to book an energy consultation. The top leads can then be exported for targeted outreach.
+In the [final notebook](https://github.com/anton-schwarberg/envision/blob/main/notebooks/11_Prediction%20on%20Possible%20Customers.ipynb), the trained model is applied to the [lead list](https://github.com/anton-schwarberg/envision/blob/main/notebooks/Customers_List_Predictions.xlsx) to predict which homeowners are most likely to book an energy consultation. The top leads can then be exported for targeted outreach.
+
 ## 6. Example Output / Screenshots
 
 ## Sources
