@@ -1,5 +1,8 @@
 pandas
 numpy
-random
-re
 faker
+seaborn
+matplotlib
+scikit-learn
+tensorflow
+joblib
