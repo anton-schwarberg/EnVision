@@ -3,12 +3,12 @@
 This university project simulated a real-world business case. It began by identifying a problem, substantiating it with relevant literature, and ultimately solving it using data science methods. This project was done in April and Mai 2024.
 ## 1. Problem
 ### 1.1 Background
-Buildings in the EU account for 36% of greenhouse gas emissions and 40% of energy consumption. In Germany, residential housing alone contributes to 15% of total national emissions (Statista, 2024). To meet its climate targets, such as 65% GHG reduction by 2030 and net, zero by 2045-the government promotes energy-efficient refurbishments, supported by mandatory energy consultations.
+Buildings in the EU account for 36% of greenhouse gas emissions and 40% of energy consumption. In Germany, residential housing alone contributes to 15% of total national emissions (Statista, 2024). To meet its climate targets, such as 65% GHG reduction by 2030 and net, zero by 2045, the government promotes energy-efficient refurbishments, supported by mandatory energy consultations (European Parliament, 2024).
 
 The role of energy consultants is therefore critical in guiding homeowners through sustainable renovations. Demand for such services is rising, with over 280,000 energy consultations in 2022 and a 25% annual increase in certified consultants.
 
 ### 1.2 Problem Spotlight
-Despite growing demand, energy consultants face persistent challenges in acquiring and retaining clients. Two key barriers are ineffective Customer Relationship Management (CRM) and limited marketing and managerial skills. The absence of these capabilities can significantly hinder business success and, in competitive markets, even lead to failure (Radipere & Scheers, 2014). Additionally, customer acquisition is notably time-consuming: based on our interviews, consultants spend an average of 3 out of 13 total hours per consultation,nearly one quarter of their time, solely on acquiring clients.
+Despite growing demand, energy consultants face persistent challenges in acquiring and retaining clients. Two key barriers are ineffective Customer Relationship Management (CRM) and limited marketing and managerial skills. The absence of these capabilities can significantly hinder business success and, in competitive markets, even lead to failure (Radipere & Scheers, 2014). Additionally, customer acquisition is very time-consuming: based on our interviews, consultants spend an average of 3 out of 13 total hours per consultation, nearly one quarter of their valuable time, solely on acquiring clients. This is time that could otherwise be used performing the consulting service.
 ## 2. Solution & Objectives
 The goal of this project was to develop machine learning models that support energy consultants in optimizing their sales and marketing strategies. Specifically, we pursued two objectives:
 1. Identify target customer profiles using unsupervised learning (k-means clustering) to uncover shared characteristics among homeowners who are likely to book an energy consultation. These insights can inform the development of tailored marketing campaigns aligned with the preferences of each customer segment.
@@ -16,7 +16,7 @@ The goal of this project was to develop machine learning models that support ene
 
 ## 3. Methodology
 ### 3.1 Data Collection
-To better understand which homeowners are most likely to participate in energy consultations, we designed a structured survey targeting a diverse group of individuals across Germany between 2020 and 2024. The survey was distributed via networks of building cooperatives and homeowners’ associations, enabling direct access to a broad and demographically varied audience. This approach helped ensure high response rates and accurate insights into residential preferences, behaviors, and motivations.
+To better understand which homeowners are most likely to participate in energy consultations, we designed a structured survey targeting a diverse group of homeowners across Germany.
 The survey captured quantitative data using three types of input variables:
 
 **Numeric continuous** (e.g., age, income)
@@ -27,7 +27,7 @@ The survey captured quantitative data using three types of input variables:
 
 The goal was to generate a rich dataset that reflects the diversity of German homeowners in both urban and rural contexts, allowing us to uncover meaningful patterns for customer targeting.
 ### 3.2 Research Focus
-Based on a thorough literature review, we explored which factors most strongly influence a homeowner’s decision to book an energy consultation. The research built upon foundational work by scholars such as Galvin (2014), Janda (2011), Stern (2000), and Heinzle (2012), who investigated the roles of structural housing characteristics, energy usage behavior, and environmental attitudes contributing to sustainable choices.
+Based on a thorough literature review, we explored which factors most strongly influence a homeowner’s decision to book an energy consultation. The research built upon foundational work by the scholars Galvin (2014), Janda (2011), Stern (2000), Heinzle (2012), Lutzenhiser (1993) and Dieu-Hang et al. (2017), who investigated the roles of structural housing characteristics, energy usage behavior, and environmental attitudes contributing to sustainable choices.
 ### 3.3 Key Variables
 | Key Variables | Reason |
 |-----------|-------|
@@ -43,10 +43,10 @@ Based on a thorough literature review, we explored which factors most strongly i
 | Dependent Variable: History of Booking Energy Consultation | Direct indicator of the target customer for energy consultants. |
 
 ## 4. Creation of Datasets
-As the scope of the course was only a few weeks, we were unable to gather sufficient data in the short time. Therefore we opted to construct our own datasets, based on the 32 interviews we had conducted about the topic:
-### 1. Training Dataset [Link](https://github.com/anton-schwarberg/envision/blob/main/notebooks/combined_data.xlsx)
+As the scope of this university project was only a few weeks, we were unable to gather sufficient data from our surveys. Therefore we opted to construct our own datasets, based on the 32 interviews we had conducted about the topic:
+### 1. Training Dataset [(Link)](https://github.com/anton-schwarberg/envision/blob/main/notebooks/combined_data.xlsx)
 This dataset was designed for training and evaluating our machine learning models. It includes multiple homeowner profiles grouped into three segments based on observed patterns from the interviews, as well as one additional group with randomized data to simulate noise and increase realism. The dataset contains a labeled outcome variable indicating whether a homeowner had booked an energy consultation or not. The goal was to simulate a realistic distribution of potential customer types.
-### 3. Lead List Dataset [Link](https://github.com/anton-schwarberg/envision/blob/main/notebooks/Potential_Customers.xlsx)
+### 3. Lead List Dataset [(Link)](https://github.com/anton-schwarberg/envision/blob/main/notebooks/Potential_Customers.xlsx)
 The second dataset simulates a real-world contact list, such as those purchased from online providers. It mirrors the structure of the training dataset but includes personal contact information (full name, email address, phone number) and does not contain the outcome label. This resembles a typical challenge faced by energy consultants, who often work with low-quality lead lists. Our predictive models are applied to this dataset to identify and prioritize the most promising leads, helping consultants save time and improve outreach efficiency.
 
 ## 4. Creating Models
@@ -73,10 +73,13 @@ These steps were implemented in the notebook [Link](https://github.com/anton-sch
 Follow these steps to set up and run the project on your local machine:
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-rep
+cd ~yourtargetfolder
+git clone https://github.com/anton-schwarberg/envision.git
+cd envision
 ```
+
 ### 2. Set up the environment
 Install all required packages:
 
@@ -85,6 +88,7 @@ pip install -r requirements.txt
 ```
 
 Alternatively, if you are using a virtual environment or conda:
+
 ```bash
 # Create and activate virtual environment (optional)
 python -m venv venv
@@ -110,6 +114,14 @@ Navigate to the `notebooks/` folder and run the files in the following order:
 9. `09_Neural Network.ipynb`
 10. `10_Random Forest.ipynb`
 11. `11_Prediction on Possible Customers.ipynb`
+
+The created datasets and model are also saved in `notebooks/`
+1. `combined_data.xlsx` -> Training set
+2. `Potential_Customers.xlsx` -> Lead list for later prediction
+3. `combined_data_binary.xlsx` -> preprocessed dataset
+4. `random_forest_model.pkl` -> Trained Model
+5. `Customers_List_Predictions.xlsx` -> Lead list with predictions for each observation
+6. `Target_Customers_Filtered.xlsx` -> Filtered list with leads that have a >80% chance of booking a consultation
 
 ### 4. Make predictions on new data
 
@@ -142,9 +154,23 @@ This could look like the following:
 ### Using the Classification Model to Inform a Tailored Email and Cold Calling Campaign
 
 Out of 1,084 homeowners in the potential customer dataset, 163 have a predicted probability of 0.8 or higher for booking an energy consultation. Based on this, energy consultants can expect around 130 actual bookings while achieving **an estimated 85% time savings** compared to contacting the full list.  
-This time saving can either be reinvested into performing more consultations or used to **personalize outreach**, such as writing more targeted emails or preparing for follow-up calls.
+This time saving can either be reinvested into performing more consultations or used to personalize outreach, such as writing more targeted emails or preparing for follow-up calls.
 
 ## Sources
+
 Statista 2024
+European Parliament 2024
 Radipere & Scheers, 2014
-Galvin (2014), Janda (2011), Stern (2000), and Heinzle (2012)
+Galvin (2014), Janda (2011), Stern (2000), Heinzle (2012), Lutzenhiser (1993) and Dieu-Hang et al. (2017)
+
+## Sources
+
+- Dieu-Hang, T., Grafton, R. Q., Martínez-Espiñeira, R., & Garcia-Valiñas, M. (2017). *Public willingness to pay for CO2 mitigation and the determinants of energy-efficient behavior in private households*. Energy Policy, 107, 467-477.
+- European Parliament (2024) https://www.europarl.europa.eu/news/de/press-room/20240308IPR19003/gebaudeenergieeffizienz-parlament-nimmt-plane-fur-co2-armere-gebaude-an
+- Galvin, R. (2014). *Energy efficiency in British housing: The role of the energy performance certificate*. Energy Policy, 73, 496-506.
+- Heinzle, S. L. (2012). *Disclosure of energy operating cost information: A silver bullet for overcoming the energy-efficiency gap?* Journal of Consumer Policy, 35(1), 43-64.
+- Janda, K. B. (2011). *Buildings don’t use energy: People do*. Architectural Science Review, 54(1), 15-22.
+- Lutzenhiser, L. (1993). *Social and behavioral aspects of energy use*. Annual Review of Energy and the Environment, 18, 247-289.
+- Radipere, S., & Scheers, L. (2014). *Investigating whether a lack of marketing and managerial skills is the main cause of business failure in South Africa*. South African Journal of Economic and Management Sciences, 8, 402-411. https://doi.org/10.4102/SAJEMS.V8I4.1171
+- Statista. (2023). Breakdown of greenhouse gas emissions in Germany 2022, by sector. https://www.statista.com/statistics/989341/greenhouse-gas-emissions-by-sector-germany/
+- Stern, P. C. (2000). *Toward a coherent theory of environmentally significant behavior*. Journal of Social Issues, 56(3), 407-424.
